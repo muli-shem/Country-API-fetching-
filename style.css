@@ -1,0 +1,181 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #fafafa;
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 24px;
+}
+
+#dark-mode-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+#search {
+    padding: 10px;
+    font-size: 16px;
+    width: 200px;
+}
+
+#region-filter {
+    padding: 10px;
+    font-size: 16px;
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.card {
+    width: 23%;
+    box-shadow: 0 0 4px 3px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.card h2 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.card p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.country-detail {
+    display: none;
+    padding: 20px;
+}
+
+.country-detail.active {
+    display: block;
+}
+
+.hidden {
+    display: none;
+}
+
+.country-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.country-info img {
+    width: 50%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.country-info h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.country-info p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+#back-button {
+    background: none;
+    border: 1px solid #333;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.dark-mode {
+    background-color: #333;
+    color: #fafafa;
+}
+
+.dark-mode header {
+    background-color: #444;
+}
+
+.dark-mode .card {
+    background-color: #444;
+}
+
+.dark-mode .country-detail {
+    background-color: #444;
+}
+
+/* Media Queries for Responsiveness */
+
+/* Tablets and below */
+@media (max-width: 768px) {
+    .card {
+        width: 45%;
+    }
+
+    .controls {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #search {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    #region-filter {
+        width: 100%;
+    }
+
+    .country-info img {
+        width: 70%;
+    }
+}
+
+/* Mobile phones and below */
+@media (max-width: 480px) {
+    .card {
+        width: 100%;
+    }
+
+    .country-info img {
+        width: 90%;
+    }
+}
